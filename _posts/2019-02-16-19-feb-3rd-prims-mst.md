@@ -1,6 +1,6 @@
 ---
 title: 2019/Feb/3rd - Prim's (MST)
-layout: page
+layout: post 
 comments: true
 social-share: true
 show-avatar: true

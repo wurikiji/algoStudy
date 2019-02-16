@@ -1,12 +1,10 @@
 ---
-title: 19/Feb/3rd - Prim's (MST)
+title: 2019/Feb/3rd - Prim's (MST)
 layout: page
 comments: true
 social-share: true
 show-avatar: true
-tags:
-- graph
-- bfs
+tags: [graph, bfs]
 ---
 
 > [Prim's (MST) : Special Subtree](https://www.hackerrank.com/challenges/primsmstsub/problem)

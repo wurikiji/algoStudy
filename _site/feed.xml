@@ -1,0 +1,37 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<rss version="2.0" xmlns:atom="http://www.w3.org/2005/Atom">
+  <channel>
+    <title>알고리즘 문제해결</title>
+    <description>알고리즘 문제풀이 스터디를 하면서 풀어본 문제들에 대한 해법</description>
+    <link>http://localhost:4000</link>
+    <atom:link href="http://localhost:4000/feed.xml" rel="self" type="application/rss+xml" />
+    
+      <item>
+        <title>19/Feb/3rd - Prim's (MST)</title>
+        <description>
+          
+          
+  Prim’s (MST) : Special Subtree
+
+
+단순히 가장 최소인 간선 구하면 되는 문제.  그래프이므로 엣지 정보를 저장할 때 양방향으로 타겟 노드 모두에게 간선 저장을 하고, priority_queue로 (cost, node id) 쌍을 저장 한뒤, cost 값이 가장 작은 순서대로 뽑아내서 visit 체크를 하면 끝.
+
+        </description>
+        <pubDate>Sat, 16 Feb 2019 00:00:00 +0900</pubDate>
+        <link>http://localhost:4000/2019-02-16-19-feb-3rd-prims-mst/</link>
+        <guid isPermaLink="true">http://localhost:4000/2019-02-16-19-feb-3rd-prims-mst/</guid>
+      </item>
+    
+      <item>
+        <title>Test markdown</title>
+        <description>
+          Each post also has a subtitle - 
+          You can write regular markdown here and Jekyll will automatically convert it to a nice webpage. I strongly encourage you to take 5 minutes to learn how to write in markdown - it’ll teach you how to transform regular text into bold/italics/headings/tables/etc. Here is some bold text Here is a...
+        </description>
+        <pubDate>Sat, 28 Feb 2015 00:00:00 +0900</pubDate>
+        <link>http://localhost:4000/2015-02-28-test-markdown/</link>
+        <guid isPermaLink="true">http://localhost:4000/2015-02-28-test-markdown/</guid>
+      </item>
+    
+  </channel>
+</rss>

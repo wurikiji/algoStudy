@@ -178,7 +178,7 @@ defaults:
     scope:
       path: "" # all files
     values:
-      layout: "page"
+      layout: "post"
       show-avatar: true
 
 # Use tags index page and make tags on each post clickable

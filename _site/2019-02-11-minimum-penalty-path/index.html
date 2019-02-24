@@ -6,7 +6,7 @@
   <meta http-equiv="X-UA-Compatible" content="IE=edge">
   <meta name="viewport" content="width=device-width, initial-scale=1.0, maximum-scale=1.0, viewport-fit=cover">
 
-  <title>2019/Feb/3rd - Prim's (MST)</title>
+  <title>Minimum Penalty Path</title>
 
   <meta name="author" content="wurikiji(GIHWAN OH)" />
 
@@ -58,24 +58,19 @@
   
 
   
-  <meta property="og:title" content="2019/Feb/3rd - Prim's (MST)" />
+  <meta property="og:title" content="Minimum Penalty Path" />
   
 
    
-  <meta property="og:description" content="
-  Prim’s (MST) : Special Subtree
-
-
-단순히 가장 최소인 간선 구하면 되는 문제.  그래프이므로 엣지 정보를 저장할 때 양방향으로 타겟 노드 모두에게 간선 저장을 하고, priority_queue로 (cost, node id) 쌍을 저장 한뒤, cost 값이 가장 작은 순서대로 뽑아내서 visit 체크를 하면 끝.
-">
+  <meta property="og:description" content="https://www.hackerrank.com/challenges/beautiful-path/problem 문제 요약 코스트를 계산하는 방법이 bitwise OR 인 그래프의 최단 경로를 구하는 문제 숨겨진 조건 bitwise OR를 사용하므로 전체 경로의 코스트 최댓값이 한정됨. 입력으로 주어지는 코스트의 최댓값이 1024 = 2^10 이므로, 최단 경로일 때 가능한 코스트의 bitwise OR 합계는 2^11 -1 = 2047 임. 풀이법 단순 최단경로 알고리즘을 사용하면...">
   
 
 
   <meta property="og:type" content="website" />
 
   
-  <meta property="og:url" content="http://localhost:4000/2019-02-16-19-feb-3rd-prims-mst/" />
-  <link rel="canonical" href="http://localhost:4000/2019-02-16-19-feb-3rd-prims-mst/" />
+  <meta property="og:url" content="http://localhost:4000/2019-02-11-minimum-penalty-path/" />
+  <link rel="canonical" href="http://localhost:4000/2019-02-11-minimum-penalty-path/" />
   
 
   
@@ -87,16 +82,11 @@
   <meta name="twitter:creator" content="@" />
 
   
-  <meta name="twitter:title" content="2019/Feb/3rd - Prim's (MST)" />
+  <meta name="twitter:title" content="Minimum Penalty Path" />
   
 
   
-  <meta name="twitter:description" content="
-  Prim’s (MST) : Special Subtree
-
-
-단순히 가장 최소인 간선 구하면 되는 문제.  그래프이므로 엣지 정보를 저장할 때 양방향으로 타겟 노드 모두에게 간선 저장을 하고, priority_queue로 (cost, node id) 쌍을 저장 한뒤, cost 값이 가장 작은 순서대로 뽑아내서 visit 체크를 하면 끝.
-">
+  <meta name="twitter:description" content="https://www.hackerrank.com/challenges/beautiful-path/problem 문제 요약 코스트를 계산하는 방법이 bitwise OR 인 그래프의 최단 경로를 구하는 문제 숨겨진 조건 bitwise OR를 사용하므로 전체 경로의 코스트 최댓값이 한정됨. 입력으로 주어지는 코스트의 최댓값이 1024 = 2^10 이므로, 최단 경로일 때 가능한 코스트의 bitwise OR 합계는 2^11 -1 = 2047 임. 풀이법 단순 최단경로 알고리즘을 사용하면...">
   
 
   
@@ -211,11 +201,11 @@
     <div class="row">
       <div class="col-lg-8 col-lg-offset-2 col-md-10 col-md-offset-1">
         <div class="post-heading">
-          <h1>2019/Feb/3rd - Prim's (MST)</h1>
+          <h1>Minimum Penalty Path</h1>
 		  
 		  
 		  
-		  <span class="post-meta">Posted on February 16, 2019</span>
+		  <span class="post-meta">Posted on February 11, 2019</span>
 		  
         </div>
       </div>
@@ -236,10 +226,30 @@
 
       <article role="main" class="blog-post">
         <blockquote>
-  <p><a href="https://www.hackerrank.com/challenges/primsmstsub/problem">Prim’s (MST) : Special Subtree</a></p>
+  <p>https://www.hackerrank.com/challenges/beautiful-path/problem</p>
 </blockquote>
 
-<p>단순히 가장 최소인 간선 구하면 되는 문제.  그래프이므로 엣지 정보를 저장할 때 양방향으로 타겟 노드 모두에게 간선 저장을 하고, <code class="highlighter-rouge">priority_queue</code>로 <code class="highlighter-rouge">(cost, node id)</code> 쌍을 저장 한뒤, <code class="highlighter-rouge">cost</code> 값이 가장 작은 순서대로 뽑아내서 <code class="highlighter-rouge">visit</code> 체크를 하면 끝.</p>
+<h2 id="문제-요약">문제 요약</h2>
+
+<p>코스트를 계산하는 방법이 <code class="highlighter-rouge">bitwise OR</code> 인 그래프의 최단 경로를 구하는 문제</p>
+
+<h2 id="숨겨진-조건">숨겨진 조건</h2>
+
+<ol>
+  <li>bitwise OR를 사용하므로 전체 경로의 코스트 최댓값이 한정됨. 입력으로 주어지는 코스트의 최댓값이 1024 = 2^10 이므로, 최단 경로일 때 가능한 코스트의 bitwise OR 합계는 2^11 -1 = 2047 임.</li>
+</ol>
+
+<h2 id="풀이법">풀이법</h2>
+
+<ol>
+  <li>
+    <p>단순 최단경로 알고리즘을 사용하면 됨
+ 최단 경로상에서 값이 감소하는 경우는 존재 하지 않으므로 다익스트라 같은 구현이 쉬운 알고리즘을 사용해도 됨.</p>
+  </li>
+  <li>
+    <p>혹은 경로 합의 최대가 2047임이 보장되므로, 입력 제한인 10^3 * 2047 =&gt; 약 10^6 =&gt; 약 100만의 매우 작은 경우의 수를 전체 탐색 해도 됨.</p>
+  </li>
+</ol>
 
       </article>
 
@@ -248,9 +258,11 @@
           Tags:
           
           
-            <a href="/algoStudy/tags#graph">graph</a>
+            <a href="/algoStudy/tags#greedy">greedy</a>
           
-            <a href="/algoStudy/tags#bfs">bfs</a>
+            <a href="/algoStudy/tags#shortest path">shortest path</a>
+          
+            <a href="/algoStudy/tags#graph">graph</a>
           
           
         </div>
@@ -267,7 +279,7 @@
 
   
   <!--- Share on Twitter -->
-    <a href="https://twitter.com/intent/tweet?text=2019%2FFeb%2F3rd+-+Prim%27s+%28MST%29+http://localhost:4000/2019-02-16-19-feb-3rd-prims-mst/"
+    <a href="https://twitter.com/intent/tweet?text=Minimum+Penalty+Path+http://localhost:4000/2019-02-11-minimum-penalty-path/"
       class="btn btn-social-icon btn-twitter" title="Share on Twitter">
       <span class="fa fa-fw fa-twitter" aria-hidden="true"></span>
       <span class="sr-only">Twitter</span>
@@ -276,7 +288,7 @@
 
   
   <!--- Share on Facebook -->
-    <a href="https://www.facebook.com/sharer/sharer.php?u=http://localhost:4000/2019-02-16-19-feb-3rd-prims-mst/"
+    <a href="https://www.facebook.com/sharer/sharer.php?u=http://localhost:4000/2019-02-11-minimum-penalty-path/"
       class="btn btn-social-icon btn-facebook" title="Share on Facebook">
       <span class="fa fa-fw fa-facebook" aria-hidden="true"></span>
       <span class="sr-only">Facebook</span>
@@ -287,7 +299,7 @@
 
   
   <!--- Share on LinkedIn -->
-    <a href="https://www.linkedin.com/shareArticle?mini=true&url=http://localhost:4000/2019-02-16-19-feb-3rd-prims-mst/"
+    <a href="https://www.linkedin.com/shareArticle?mini=true&url=http://localhost:4000/2019-02-11-minimum-penalty-path/"
       class="btn btn-social-icon btn-linkedin" title="Share on LinkedIn">
       <span class="fa fa-fw fa-linkedin" aria-hidden="true"></span>
       <span class="sr-only">LinkedIn</span>
@@ -303,12 +315,12 @@
       <ul class="pager blog-pager">
         
         <li class="previous">
-          <a href="/algoStudy/2015-02-28-test-markdown/" data-toggle="tooltip" data-placement="top" title="Test markdown">&larr; Previous Post</a>
+          <a href="/algoStudy/2019-02-07-2019-feb-07th-matrix-layer-rotation/" data-toggle="tooltip" data-placement="top" title="2019/Feb/07th - Matrix Layer Rotation">&larr; Previous Post</a>
         </li>
         
         
         <li class="next">
-          <a href="/algoStudy/2019-02-24-2019-feb-07th-matrix-layer-rotation/" data-toggle="tooltip" data-placement="top" title="2019/Feb/07th - Matrix Layer Rotation">Next Post &rarr;</a>
+          <a href="/algoStudy/2019-02-12-a-or-b/" data-toggle="tooltip" data-placement="top" title="A or B">Next Post &rarr;</a>
         </li>
         
       </ul>

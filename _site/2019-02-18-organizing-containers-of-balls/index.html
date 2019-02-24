@@ -6,12 +6,10 @@
   <meta http-equiv="X-UA-Compatible" content="IE=edge">
   <meta name="viewport" content="width=device-width, initial-scale=1.0, maximum-scale=1.0, viewport-fit=cover">
 
-  <title>알고리즘 문제해결</title>
+  <title>Organizing Containers of Balls</title>
 
   <meta name="author" content="wurikiji(GIHWAN OH)" />
 
-  
-  <meta name="description" content="디프만 알고리즘 문제해결 스터디 개인 풀이법">
   
 
   <link rel="alternate" type="application/rss+xml" title="알고리즘 문제해결 - 알고리즘 문제풀이 스터디를 하면서 풀어본 문제들에 대한 해법" href="/algoStudy/feed.xml" />
@@ -60,19 +58,19 @@
   
 
   
-  <meta property="og:title" content="알고리즘 문제해결" />
+  <meta property="og:title" content="Organizing Containers of Balls" />
   
 
    
-  <meta property="og:description" content="디프만 알고리즘 문제해결 스터디 개인 풀이법">
+  <meta property="og:description" content="문제 https://www.hackerrank.com/challenges/organizing-containers-of-balls/problem 코드 https://github.com/depromeet/algoStudy/blob/master/medium/1902/190218/ogh.cc 문제 요약 N 종류의 공 M개를 N개의 상자에 나눠담고 싶음. 단, 섞여있는 공을 다른 상자에 옮기고 싶은 경우 타겟 상자의 다른 공과 swap해야만 옮길 수 있음. 모든 상자가 단 한 종류의 공만 가지고 있도록 바꿀 수 있으면 Possible 못 바꾸면 Impossible을 출력 문제 풀이 공의 종류와...">
   
 
 
   <meta property="og:type" content="website" />
 
   
-  <meta property="og:url" content="http://localhost:4000/page2/" />
-  <link rel="canonical" href="http://localhost:4000/page2/" />
+  <meta property="og:url" content="http://localhost:4000/2019-02-18-organizing-containers-of-balls/" />
+  <link rel="canonical" href="http://localhost:4000/2019-02-18-organizing-containers-of-balls/" />
   
 
   
@@ -84,11 +82,11 @@
   <meta name="twitter:creator" content="@" />
 
   
-  <meta name="twitter:title" content="알고리즘 문제해결" />
+  <meta name="twitter:title" content="Organizing Containers of Balls" />
   
 
   
-  <meta name="twitter:description" content="디프만 알고리즘 문제해결 스터디 개인 풀이법">
+  <meta name="twitter:description" content="문제 https://www.hackerrank.com/challenges/organizing-containers-of-balls/problem 코드 https://github.com/depromeet/algoStudy/blob/master/medium/1902/190218/ogh.cc 문제 요약 N 종류의 공 M개를 N개의 상자에 나눠담고 싶음. 단, 섞여있는 공을 다른 상자에 옮기고 싶은 경우 타겟 상자의 다른 공과 swap해야만 옮길 수 있음. 모든 상자가 단 한 종류의 공만 가지고 있도록 바꿀 수 있으면 Possible 못 바꾸면 Impossible을 출력 문제 풀이 공의 종류와...">
   
 
   
@@ -202,15 +200,12 @@
   <div class="container">
     <div class="row">
       <div class="col-lg-8 col-lg-offset-2 col-md-10 col-md-offset-1">
-        <div class="page-heading">
-          <h1>알고리즘 문제해결</h1>
-		  
-		    
-            <hr class="small">
-            <span class="page-subheading">디프만 알고리즘 문제해결 스터디 개인 풀이법</span>
-			
+        <div class="post-heading">
+          <h1>Organizing Containers of Balls</h1>
 		  
 		  
+		  
+		  <span class="post-meta">Posted on February 18, 2019</span>
 		  
         </div>
       </div>
@@ -223,231 +218,111 @@
 
 
 
-<div class="container" role="main">
+<div class="container">
   <div class="row">
     <div class="col-lg-8 col-lg-offset-2 col-md-10 col-md-offset-1">
-      <div class="posts-list">
-  
-  <article class="post-preview">
-    <a href="/algoStudy/2019-02-11-minimum-penalty-path/">
-	  <h2 class="post-title">Minimum Penalty Path</h2>
 
-	  
+      
+
+      <article role="main" class="blog-post">
+        <blockquote>
+  <p>문제 https://www.hackerrank.com/challenges/organizing-containers-of-balls/problem</p>
+</blockquote>
+
+<blockquote>
+  <p>코드 https://github.com/depromeet/algoStudy/blob/master/medium/1902/190218/ogh.cc</p>
+</blockquote>
+
+<h2 id="문제-요약">문제 요약</h2>
+
+<p>N 종류의 공 M개를 N개의 상자에 나눠담고 싶음. 단, 섞여있는 공을 다른 상자에 옮기고 싶은 경우 타겟 상자의 다른 공과 <code class="highlighter-rouge">swap</code>해야만 옮길 수 있음. 모든 상자가 단 한 종류의 공만 가지고 있도록 바꿀 수 있으면 <strong>Possible</strong> 못 바꾸면 <strong>Impossible</strong>을 출력</p>
+
+<h2 id="문제-풀이">문제 풀이</h2>
+
+<p>공의 종류와 상자의 갯수가 동일하므로, 한 종류의 공은 반드시 하나의 상자에 모두 다 들어 가야함. 한 종류의 공이 여러 상자에 들어갈 경우 “Impossible”임. 그러기 위해선 반드시 상자들의 크기 집합과 각 종류별 공의 집합이 완전히 일치해야함.</p>
+
+<ol>
+  <li>컨테이너 사이즈 집합을 만듬</li>
+  <li>종류별 공의 갯수를 세고 공 갯수 집합을 만듬</li>
+  <li>두 집합의 원소가 완전히 동일한지 판별 하면 끝</li>
+</ol>
+
+      </article>
+
+      
+        <div class="blog-tags">
+          Tags:
+          
+          
+            <a href="/algoStudy/tags#implementation">implementation</a>
+          
+          
+        </div>
+      
+
+      
+        <!-- Check if any share-links are active -->
+
+
+
+
+<section id = "social-share-section">
+  <span class="sr-only">Share: </span>
+
+  
+  <!--- Share on Twitter -->
+    <a href="https://twitter.com/intent/tweet?text=Organizing+Containers+of+Balls+http://localhost:4000/2019-02-18-organizing-containers-of-balls/"
+      class="btn btn-social-icon btn-twitter" title="Share on Twitter">
+      <span class="fa fa-fw fa-twitter" aria-hidden="true"></span>
+      <span class="sr-only">Twitter</span>
     </a>
-
-    <p class="post-meta">
-      Posted on February 11, 2019
-    </p>
-
-    <div class="post-entry-container">
-      
-      <div class="post-entry">
-        
-  https://www.hackerrank.com/challenges/beautiful-path/problem
-
-
-
-        
-        
-          <a href="/algoStudy/2019-02-11-minimum-penalty-path/" class="post-read-more">[Read&nbsp;More]</a>
-        
-      </div>
-    </div>
-
-    
-    <div class="blog-tags">
-      Tags:
-      
-      
-      <a href="/algoStudy/tags#greedy">greedy</a>
-      
-      <a href="/algoStudy/tags#shortest path">shortest path</a>
-      
-      <a href="/algoStudy/tags#graph">graph</a>
-      
-      
-    </div>
-    
-
-   </article>
   
-  <article class="post-preview">
-    <a href="/algoStudy/2019-02-07-2019-feb-07th-matrix-layer-rotation/">
-	  <h2 class="post-title">2019/Feb/07th - Matrix Layer Rotation</h2>
 
-	  
+  
+  <!--- Share on Facebook -->
+    <a href="https://www.facebook.com/sharer/sharer.php?u=http://localhost:4000/2019-02-18-organizing-containers-of-balls/"
+      class="btn btn-social-icon btn-facebook" title="Share on Facebook">
+      <span class="fa fa-fw fa-facebook" aria-hidden="true"></span>
+      <span class="sr-only">Facebook</span>
     </a>
-
-    <p class="post-meta">
-      Posted on February 7, 2019
-    </p>
-
-    <div class="post-entry-container">
-      
-      <div class="post-entry">
-        
-  https://www.hackerrank.com/challenges/matrix-rotation-algo/problem
-
-
-
-        
-        
-          <a href="/algoStudy/2019-02-07-2019-feb-07th-matrix-layer-rotation/" class="post-read-more">[Read&nbsp;More]</a>
-        
-      </div>
-    </div>
-
-    
-    <div class="blog-tags">
-      Tags:
-      
-      
-      <a href="/algoStudy/tags#implementation">implementation</a>
-      
-      
-    </div>
-    
-
-   </article>
   
-  <article class="post-preview">
-    <a href="/algoStudy/2019-02-06-2019-feb-6th-lilys-homework/">
-	  <h2 class="post-title">2019/Feb/6th - Lily's Homework</h2>
 
-	  
+  
+
+  
+  <!--- Share on LinkedIn -->
+    <a href="https://www.linkedin.com/shareArticle?mini=true&url=http://localhost:4000/2019-02-18-organizing-containers-of-balls/"
+      class="btn btn-social-icon btn-linkedin" title="Share on LinkedIn">
+      <span class="fa fa-fw fa-linkedin" aria-hidden="true"></span>
+      <span class="sr-only">LinkedIn</span>
     </a>
-
-    <p class="post-meta">
-      Posted on February 6, 2019
-    </p>
-
-    <div class="post-entry-container">
-      
-      <div class="post-entry">
-        
-  https://www.hackerrank.com/challenges/lilys-homework/problem
-
-
-
-        
-        
-          <a href="/algoStudy/2019-02-06-2019-feb-6th-lilys-homework/" class="post-read-more">[Read&nbsp;More]</a>
-        
-      </div>
-    </div>
-
-    
-    <div class="blog-tags">
-      Tags:
-      
-      
-      <a href="/algoStudy/tags#sort">sort</a>
-      
-      <a href="/algoStudy/tags#implementation">implementation</a>
-      
-      
-    </div>
-    
-
-   </article>
   
-  <article class="post-preview">
-    <a href="/algoStudy/2019-02-05-2019-feb-5th-new-year-chaos/">
-	  <h2 class="post-title">2019/Feb/5th - New Year Chaos</h2>
 
-	  
-    </a>
+</section>
 
-    <p class="post-meta">
-      Posted on February 5, 2019
-    </p>
 
-    <div class="post-entry-container">
+
       
-      <div class="post-entry">
+
+      <ul class="pager blog-pager">
         
-  https://www.hackerrank.com/challenges/new-year-chaos/problem
-
-
-
+        <li class="previous">
+          <a href="/algoStudy/2019-02-15-stock-maximize/" data-toggle="tooltip" data-placement="top" title="Stock Maximize">&larr; Previous Post</a>
+        </li>
         
         
-          <a href="/algoStudy/2019-02-05-2019-feb-5th-new-year-chaos/" class="post-read-more">[Read&nbsp;More]</a>
-        
-      </div>
-    </div>
+      </ul>
 
-    
-    <div class="blog-tags">
-      Tags:
       
+        <div class="disqus-comments">
+          
+        </div>
+          
+        <div class="staticman-comments">
+          
+
+        </div>
       
-      <a href="/algoStudy/tags#implementation">implementation</a>
-      
-      
-    </div>
-    
-
-   </article>
-  
-  <article class="post-preview">
-    <a href="/algoStudy/2019-02-03-19-feb-3rd-prims-mst/">
-	  <h2 class="post-title">2019/Feb/3rd - Prim's (MST)</h2>
-
-	  
-    </a>
-
-    <p class="post-meta">
-      Posted on February 3, 2019
-    </p>
-
-    <div class="post-entry-container">
-      
-      <div class="post-entry">
-        
-  Prim’s (MST) : Special Subtree
-
-
-
-        
-        
-          <a href="/algoStudy/2019-02-03-19-feb-3rd-prims-mst/" class="post-read-more">[Read&nbsp;More]</a>
-        
-      </div>
-    </div>
-
-    
-    <div class="blog-tags">
-      Tags:
-      
-      
-      <a href="/algoStudy/tags#graph">graph</a>
-      
-      <a href="/algoStudy/tags#bfs">bfs</a>
-      
-      
-    </div>
-    
-
-   </article>
-  
-</div>
-
-
-<ul class="pager main-pager">
-  
-  <li class="previous">
-    <a href="/algoStudy/">&larr; Newer Posts</a>
-  </li>
-  
-  
-  <li class="next">
-    <a href="/algoStudy/page3">Older Posts &rarr;</a>
-  </li>
-  
-</ul>
-
-	    
     </div>
   </div>
 </div>

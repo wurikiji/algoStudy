@@ -6,12 +6,10 @@
   <meta http-equiv="X-UA-Compatible" content="IE=edge">
   <meta name="viewport" content="width=device-width, initial-scale=1.0, maximum-scale=1.0, viewport-fit=cover">
 
-  <title>알고리즘 문제해결</title>
+  <title>A or B</title>
 
   <meta name="author" content="wurikiji(GIHWAN OH)" />
 
-  
-  <meta name="description" content="디프만 알고리즘 문제해결 스터디 개인 풀이법">
   
 
   <link rel="alternate" type="application/rss+xml" title="알고리즘 문제해결 - 알고리즘 문제풀이 스터디를 하면서 풀어본 문제들에 대한 해법" href="/algoStudy/feed.xml" />
@@ -60,19 +58,19 @@
   
 
   
-  <meta property="og:title" content="알고리즘 문제해결" />
+  <meta property="og:title" content="A or B" />
   
 
    
-  <meta property="og:description" content="디프만 알고리즘 문제해결 스터디 개인 풀이법">
+  <meta property="og:description" content="https://www.hackerrank.com/challenges/aorb/problem 문제 요약 숫자 A, B 가 주어지고 타겟 C가 주어짐 A bitwise OR B 가 C가 되도록 A와 B의 숫자를 바꿔야함 주어진 k개 이하의 bit를 수정하여 C를 만들 수 있으면, 여러가지 조합 중 a. 가장 작은 A이면서 b. 가장 작은 B인 조합을 출력 k 비트 가지고 C를 만들 수...">
   
 
 
   <meta property="og:type" content="website" />
 
   
-  <meta property="og:url" content="http://localhost:4000/page2/" />
-  <link rel="canonical" href="http://localhost:4000/page2/" />
+  <meta property="og:url" content="http://localhost:4000/2019-02-12-a-or-b/" />
+  <link rel="canonical" href="http://localhost:4000/2019-02-12-a-or-b/" />
   
 
   
@@ -84,11 +82,11 @@
   <meta name="twitter:creator" content="@" />
 
   
-  <meta name="twitter:title" content="알고리즘 문제해결" />
+  <meta name="twitter:title" content="A or B" />
   
 
   
-  <meta name="twitter:description" content="디프만 알고리즘 문제해결 스터디 개인 풀이법">
+  <meta name="twitter:description" content="https://www.hackerrank.com/challenges/aorb/problem 문제 요약 숫자 A, B 가 주어지고 타겟 C가 주어짐 A bitwise OR B 가 C가 되도록 A와 B의 숫자를 바꿔야함 주어진 k개 이하의 bit를 수정하여 C를 만들 수 있으면, 여러가지 조합 중 a. 가장 작은 A이면서 b. 가장 작은 B인 조합을 출력 k 비트 가지고 C를 만들 수...">
   
 
   
@@ -202,15 +200,12 @@
   <div class="container">
     <div class="row">
       <div class="col-lg-8 col-lg-offset-2 col-md-10 col-md-offset-1">
-        <div class="page-heading">
-          <h1>알고리즘 문제해결</h1>
-		  
-		    
-            <hr class="small">
-            <span class="page-subheading">디프만 알고리즘 문제해결 스터디 개인 풀이법</span>
-			
+        <div class="post-heading">
+          <h1>A or B</h1>
 		  
 		  
+		  
+		  <span class="post-meta">Posted on February 12, 2019</span>
 		  
         </div>
       </div>
@@ -223,231 +218,118 @@
 
 
 
-<div class="container" role="main">
+<div class="container">
   <div class="row">
     <div class="col-lg-8 col-lg-offset-2 col-md-10 col-md-offset-1">
-      <div class="posts-list">
-  
-  <article class="post-preview">
-    <a href="/algoStudy/2019-02-11-minimum-penalty-path/">
-	  <h2 class="post-title">Minimum Penalty Path</h2>
 
-	  
+      
+
+      <article role="main" class="blog-post">
+        <blockquote>
+  <p>https://www.hackerrank.com/challenges/aorb/problem</p>
+</blockquote>
+
+<h2 id="문제-요약">문제 요약</h2>
+
+<ol>
+  <li>숫자 A, B 가 주어지고 타겟 C가 주어짐</li>
+  <li>A <em>bitwise OR</em> B 가 C가 되도록 A와 B의 숫자를 바꿔야함</li>
+  <li>주어진 k개 이하의 bit를 수정하여 C를 만들 수 있으면, 여러가지 조합 중 a. 가장 작은 A이면서 b. 가장 작은 B인 조합을 출력</li>
+  <li>k 비트 가지고 C를 만들 수 없으면 -1 출력</li>
+</ol>
+
+<h2 id="풀이법">풀이법</h2>
+
+<p>문제에 주어진 조건을 그냥 그대로 구현하면 됨.</p>
+
+<ol>
+  <li><code class="highlighter-rouge">A | B</code>를 수행하면서 C를 만들 수 있게 체크</li>
+  <li>바꾼 bit 수가 k 를 초과하지 않을 경우, A를 먼저 최소로 만들고, 남은 비트로 B를 최소로 만듬</li>
+  <li>Leading zero를 모두 제거하고 출력</li>
+</ol>
+
+      </article>
+
+      
+        <div class="blog-tags">
+          Tags:
+          
+          
+            <a href="/algoStudy/tags#greedy">greedy</a>
+          
+            <a href="/algoStudy/tags#implementation">implementation</a>
+          
+          
+        </div>
+      
+
+      
+        <!-- Check if any share-links are active -->
+
+
+
+
+<section id = "social-share-section">
+  <span class="sr-only">Share: </span>
+
+  
+  <!--- Share on Twitter -->
+    <a href="https://twitter.com/intent/tweet?text=A+or+B+http://localhost:4000/2019-02-12-a-or-b/"
+      class="btn btn-social-icon btn-twitter" title="Share on Twitter">
+      <span class="fa fa-fw fa-twitter" aria-hidden="true"></span>
+      <span class="sr-only">Twitter</span>
     </a>
-
-    <p class="post-meta">
-      Posted on February 11, 2019
-    </p>
-
-    <div class="post-entry-container">
-      
-      <div class="post-entry">
-        
-  https://www.hackerrank.com/challenges/beautiful-path/problem
-
-
-
-        
-        
-          <a href="/algoStudy/2019-02-11-minimum-penalty-path/" class="post-read-more">[Read&nbsp;More]</a>
-        
-      </div>
-    </div>
-
-    
-    <div class="blog-tags">
-      Tags:
-      
-      
-      <a href="/algoStudy/tags#greedy">greedy</a>
-      
-      <a href="/algoStudy/tags#shortest path">shortest path</a>
-      
-      <a href="/algoStudy/tags#graph">graph</a>
-      
-      
-    </div>
-    
-
-   </article>
   
-  <article class="post-preview">
-    <a href="/algoStudy/2019-02-07-2019-feb-07th-matrix-layer-rotation/">
-	  <h2 class="post-title">2019/Feb/07th - Matrix Layer Rotation</h2>
 
-	  
+  
+  <!--- Share on Facebook -->
+    <a href="https://www.facebook.com/sharer/sharer.php?u=http://localhost:4000/2019-02-12-a-or-b/"
+      class="btn btn-social-icon btn-facebook" title="Share on Facebook">
+      <span class="fa fa-fw fa-facebook" aria-hidden="true"></span>
+      <span class="sr-only">Facebook</span>
     </a>
-
-    <p class="post-meta">
-      Posted on February 7, 2019
-    </p>
-
-    <div class="post-entry-container">
-      
-      <div class="post-entry">
-        
-  https://www.hackerrank.com/challenges/matrix-rotation-algo/problem
-
-
-
-        
-        
-          <a href="/algoStudy/2019-02-07-2019-feb-07th-matrix-layer-rotation/" class="post-read-more">[Read&nbsp;More]</a>
-        
-      </div>
-    </div>
-
-    
-    <div class="blog-tags">
-      Tags:
-      
-      
-      <a href="/algoStudy/tags#implementation">implementation</a>
-      
-      
-    </div>
-    
-
-   </article>
   
-  <article class="post-preview">
-    <a href="/algoStudy/2019-02-06-2019-feb-6th-lilys-homework/">
-	  <h2 class="post-title">2019/Feb/6th - Lily's Homework</h2>
 
-	  
+  
+
+  
+  <!--- Share on LinkedIn -->
+    <a href="https://www.linkedin.com/shareArticle?mini=true&url=http://localhost:4000/2019-02-12-a-or-b/"
+      class="btn btn-social-icon btn-linkedin" title="Share on LinkedIn">
+      <span class="fa fa-fw fa-linkedin" aria-hidden="true"></span>
+      <span class="sr-only">LinkedIn</span>
     </a>
-
-    <p class="post-meta">
-      Posted on February 6, 2019
-    </p>
-
-    <div class="post-entry-container">
-      
-      <div class="post-entry">
-        
-  https://www.hackerrank.com/challenges/lilys-homework/problem
-
-
-
-        
-        
-          <a href="/algoStudy/2019-02-06-2019-feb-6th-lilys-homework/" class="post-read-more">[Read&nbsp;More]</a>
-        
-      </div>
-    </div>
-
-    
-    <div class="blog-tags">
-      Tags:
-      
-      
-      <a href="/algoStudy/tags#sort">sort</a>
-      
-      <a href="/algoStudy/tags#implementation">implementation</a>
-      
-      
-    </div>
-    
-
-   </article>
   
-  <article class="post-preview">
-    <a href="/algoStudy/2019-02-05-2019-feb-5th-new-year-chaos/">
-	  <h2 class="post-title">2019/Feb/5th - New Year Chaos</h2>
 
-	  
-    </a>
+</section>
 
-    <p class="post-meta">
-      Posted on February 5, 2019
-    </p>
 
-    <div class="post-entry-container">
+
       
-      <div class="post-entry">
+
+      <ul class="pager blog-pager">
         
-  https://www.hackerrank.com/challenges/new-year-chaos/problem
-
-
-
+        <li class="previous">
+          <a href="/algoStudy/2019-02-11-minimum-penalty-path/" data-toggle="tooltip" data-placement="top" title="Minimum Penalty Path">&larr; Previous Post</a>
+        </li>
         
         
-          <a href="/algoStudy/2019-02-05-2019-feb-5th-new-year-chaos/" class="post-read-more">[Read&nbsp;More]</a>
+        <li class="next">
+          <a href="/algoStudy/2019-02-13-the-story-of-a-tree/" data-toggle="tooltip" data-placement="top" title="The Story of a Tree">Next Post &rarr;</a>
+        </li>
         
-      </div>
-    </div>
+      </ul>
 
-    
-    <div class="blog-tags">
-      Tags:
       
+        <div class="disqus-comments">
+          
+        </div>
+          
+        <div class="staticman-comments">
+          
+
+        </div>
       
-      <a href="/algoStudy/tags#implementation">implementation</a>
-      
-      
-    </div>
-    
-
-   </article>
-  
-  <article class="post-preview">
-    <a href="/algoStudy/2019-02-03-19-feb-3rd-prims-mst/">
-	  <h2 class="post-title">2019/Feb/3rd - Prim's (MST)</h2>
-
-	  
-    </a>
-
-    <p class="post-meta">
-      Posted on February 3, 2019
-    </p>
-
-    <div class="post-entry-container">
-      
-      <div class="post-entry">
-        
-  Prim’s (MST) : Special Subtree
-
-
-
-        
-        
-          <a href="/algoStudy/2019-02-03-19-feb-3rd-prims-mst/" class="post-read-more">[Read&nbsp;More]</a>
-        
-      </div>
-    </div>
-
-    
-    <div class="blog-tags">
-      Tags:
-      
-      
-      <a href="/algoStudy/tags#graph">graph</a>
-      
-      <a href="/algoStudy/tags#bfs">bfs</a>
-      
-      
-    </div>
-    
-
-   </article>
-  
-</div>
-
-
-<ul class="pager main-pager">
-  
-  <li class="previous">
-    <a href="/algoStudy/">&larr; Newer Posts</a>
-  </li>
-  
-  
-  <li class="next">
-    <a href="/algoStudy/page3">Older Posts &rarr;</a>
-  </li>
-  
-</ul>
-
-	    
     </div>
   </div>
 </div>

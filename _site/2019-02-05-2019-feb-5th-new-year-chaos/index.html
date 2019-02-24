@@ -6,7 +6,7 @@
   <meta http-equiv="X-UA-Compatible" content="IE=edge">
   <meta name="viewport" content="width=device-width, initial-scale=1.0, maximum-scale=1.0, viewport-fit=cover">
 
-  <title>A or B</title>
+  <title>2019/Feb/5th - New Year Chaos</title>
 
   <meta name="author" content="wurikiji(GIHWAN OH)" />
 
@@ -58,19 +58,19 @@
   
 
   
-  <meta property="og:title" content="A or B" />
+  <meta property="og:title" content="2019/Feb/5th - New Year Chaos" />
   
 
    
-  <meta property="og:description" content="https://www.hackerrank.com/challenges/aorb/problem 문제 요약 숫자 A, B 가 주어지고 타겟 C가 주어짐 A bitwise OR B 가 C가 되도록 A와 B의 숫자를 바꿔야함 주어진 k개 이하의 bit를 수정하여 C를 만들 수 있으면, 여러가지 조합 중 a. 가장 작은 A이면서 b. 가장 작은 B인 조합을 출력 k 비트 가지고 C를 만들 수...">
+  <meta property="og:description" content="https://www.hackerrank.com/challenges/new-year-chaos/problem 문제 요약 [1 …. N] 으로 원소가 1씩 증가하는 정렬 된 배열의 N이 문제로 주어짐 각 원소는 원래의 자리보다 최대 2칸 앞까지 이동할 수 있음 이동은 bubbling 형태 (가고싶은 자리로 바로 swap이 아닌 한칸씩 swap하면서 이동) 검증을 원하는 배열이 위의 조건을 만족하지 못할 경우 Too chaotic을 출력하고, 만족할 경우...">
   
 
 
   <meta property="og:type" content="website" />
 
   
-  <meta property="og:url" content="http://localhost:4000/2019-02-24-a-or-b/" />
-  <link rel="canonical" href="http://localhost:4000/2019-02-24-a-or-b/" />
+  <meta property="og:url" content="http://localhost:4000/2019-02-05-2019-feb-5th-new-year-chaos/" />
+  <link rel="canonical" href="http://localhost:4000/2019-02-05-2019-feb-5th-new-year-chaos/" />
   
 
   
@@ -82,11 +82,11 @@
   <meta name="twitter:creator" content="@" />
 
   
-  <meta name="twitter:title" content="A or B" />
+  <meta name="twitter:title" content="2019/Feb/5th - New Year Chaos" />
   
 
   
-  <meta name="twitter:description" content="https://www.hackerrank.com/challenges/aorb/problem 문제 요약 숫자 A, B 가 주어지고 타겟 C가 주어짐 A bitwise OR B 가 C가 되도록 A와 B의 숫자를 바꿔야함 주어진 k개 이하의 bit를 수정하여 C를 만들 수 있으면, 여러가지 조합 중 a. 가장 작은 A이면서 b. 가장 작은 B인 조합을 출력 k 비트 가지고 C를 만들 수...">
+  <meta name="twitter:description" content="https://www.hackerrank.com/challenges/new-year-chaos/problem 문제 요약 [1 …. N] 으로 원소가 1씩 증가하는 정렬 된 배열의 N이 문제로 주어짐 각 원소는 원래의 자리보다 최대 2칸 앞까지 이동할 수 있음 이동은 bubbling 형태 (가고싶은 자리로 바로 swap이 아닌 한칸씩 swap하면서 이동) 검증을 원하는 배열이 위의 조건을 만족하지 못할 경우 Too chaotic을 출력하고, 만족할 경우...">
   
 
   
@@ -201,11 +201,11 @@
     <div class="row">
       <div class="col-lg-8 col-lg-offset-2 col-md-10 col-md-offset-1">
         <div class="post-heading">
-          <h1>A or B</h1>
+          <h1>2019/Feb/5th - New Year Chaos</h1>
 		  
 		  
 		  
-		  <span class="post-meta">Posted on February 24, 2019</span>
+		  <span class="post-meta">Posted on February 5, 2019</span>
 		  
         </div>
       </div>
@@ -226,26 +226,36 @@
 
       <article role="main" class="blog-post">
         <blockquote>
-  <p>https://www.hackerrank.com/challenges/aorb/problem</p>
+  <p>https://www.hackerrank.com/challenges/new-year-chaos/problem</p>
 </blockquote>
 
 <h2 id="문제-요약">문제 요약</h2>
 
 <ol>
-  <li>숫자 A, B 가 주어지고 타겟 C가 주어짐</li>
-  <li>A <em>bitwise OR</em> B 가 C가 되도록 A와 B의 숫자를 바꿔야함</li>
-  <li>주어진 k개 이하의 bit를 수정하여 C를 만들 수 있으면, 여러가지 조합 중 a. 가장 작은 A이면서 b. 가장 작은 B인 조합을 출력</li>
-  <li>k 비트 가지고 C를 만들 수 없으면 -1 출력</li>
+  <li>[1 …. N] 으로  원소가 1씩 증가하는 정렬 된 배열의 N이 문제로 주어짐</li>
+  <li>각 원소는 원래의 자리보다 최대 2칸 앞까지 이동할 수 있음</li>
+  <li>이동은 <code class="highlighter-rouge">bubbling</code> 형태 (가고싶은 자리로 바로 swap이 아닌 한칸씩 swap하면서 이동)</li>
+  <li>검증을 원하는 배열이 위의 조건을 만족하지 못할 경우 <code class="highlighter-rouge">Too chaotic</code>을 출력하고, 만족할 경우 몇번의 swap이 필요한지 출력</li>
+</ol>
+
+<h2 id="숨은-조건">숨은 조건</h2>
+
+<ol>
+  <li>
+    <p>앞의 숫자가 뒤로는 무한정 이동할 수 있다. 
+ 예를 들어 <code class="highlighter-rouge">[1,2,3,4,5]</code> 배열이 있을 때, <em>2</em>가 <em>1</em>로 이동하면 <code class="highlighter-rouge">[2,1,3,4,5]</code>. 다시 3이 앞으로 이동하면, <code class="highlighter-rouge">[2,3,1,4,5]</code>. 다시 4가 앞으로 이동하면, <code class="highlighter-rouge">[2,3,4,1,5]</code>. 다시 5가 앞으로 이동하면, <code class="highlighter-rouge">[2,3,4,5,1]</code>의 형태가 가능하다. 이를 통해 작은 숫자가 뒤로 이동한 거리는 상관이 없음을 알 수 있다.</p>
+  </li>
+  <li>
+    <p>위의 조건의 예제에서 알 수 있듯이, 실제 swap 한 횟수는 작은 숫자가 swap 당한 횟수와 일치함.</p>
+  </li>
 </ol>
 
 <h2 id="풀이법">풀이법</h2>
 
-<p>문제에 주어진 조건을 그냥 그대로 구현하면 됨.</p>
-
 <ol>
-  <li><code class="highlighter-rouge">A | B</code>를 수행하면서 C를 만들 수 있게 체크</li>
-  <li>바꾼 bit 수가 k 를 초과하지 않을 경우, A를 먼저 최소로 만들고, 남은 비트로 B를 최소로 만듬</li>
-  <li>Leading zero를 모두 제거하고 출력</li>
+  <li>배열의 뒤부터 검사를 시작, 일단 원소의 위치가 원래 위치보다 2 초과하여 멀어졌을 경우 <code class="highlighter-rouge">Too chaotic</code></li>
+  <li>그렇지 않을 경우, 현재 원소보다 앞에 있는 원소들 중 현재 원소보다 더 큰 원소의 갯수를 셈. 현재 원소보다 큰 원소가 앞에 있으려면, 현재 원소를 대상으로 swap을 수행했어야 가능한 일이므로 조건을 만족하는 계산법이 됨.</li>
+  <li>다 더해서 출력하면 끝</li>
 </ol>
 
       </article>
@@ -254,8 +264,6 @@
         <div class="blog-tags">
           Tags:
           
-          
-            <a href="/algoStudy/tags#greedy">greedy</a>
           
             <a href="/algoStudy/tags#implementation">implementation</a>
           
@@ -274,7 +282,7 @@
 
   
   <!--- Share on Twitter -->
-    <a href="https://twitter.com/intent/tweet?text=A+or+B+http://localhost:4000/2019-02-24-a-or-b/"
+    <a href="https://twitter.com/intent/tweet?text=2019%2FFeb%2F5th+-+New+Year+Chaos+http://localhost:4000/2019-02-05-2019-feb-5th-new-year-chaos/"
       class="btn btn-social-icon btn-twitter" title="Share on Twitter">
       <span class="fa fa-fw fa-twitter" aria-hidden="true"></span>
       <span class="sr-only">Twitter</span>
@@ -283,7 +291,7 @@
 
   
   <!--- Share on Facebook -->
-    <a href="https://www.facebook.com/sharer/sharer.php?u=http://localhost:4000/2019-02-24-a-or-b/"
+    <a href="https://www.facebook.com/sharer/sharer.php?u=http://localhost:4000/2019-02-05-2019-feb-5th-new-year-chaos/"
       class="btn btn-social-icon btn-facebook" title="Share on Facebook">
       <span class="fa fa-fw fa-facebook" aria-hidden="true"></span>
       <span class="sr-only">Facebook</span>
@@ -294,7 +302,7 @@
 
   
   <!--- Share on LinkedIn -->
-    <a href="https://www.linkedin.com/shareArticle?mini=true&url=http://localhost:4000/2019-02-24-a-or-b/"
+    <a href="https://www.linkedin.com/shareArticle?mini=true&url=http://localhost:4000/2019-02-05-2019-feb-5th-new-year-chaos/"
       class="btn btn-social-icon btn-linkedin" title="Share on LinkedIn">
       <span class="fa fa-fw fa-linkedin" aria-hidden="true"></span>
       <span class="sr-only">LinkedIn</span>
@@ -310,12 +318,12 @@
       <ul class="pager blog-pager">
         
         <li class="previous">
-          <a href="/algoStudy/2019-02-24-2019-feb-6th-lilys-homework/" data-toggle="tooltip" data-placement="top" title="2019/Feb/6th - Lily's Homework">&larr; Previous Post</a>
+          <a href="/algoStudy/2019-02-03-19-feb-3rd-prims-mst/" data-toggle="tooltip" data-placement="top" title="2019/Feb/3rd - Prim's (MST)">&larr; Previous Post</a>
         </li>
         
         
         <li class="next">
-          <a href="/algoStudy/2019-02-24-minimum-penalty-path/" data-toggle="tooltip" data-placement="top" title="Minimum Penalty Path">Next Post &rarr;</a>
+          <a href="/algoStudy/2019-02-06-2019-feb-6th-lilys-homework/" data-toggle="tooltip" data-placement="top" title="2019/Feb/6th - Lily's Homework">Next Post &rarr;</a>
         </li>
         
       </ul>

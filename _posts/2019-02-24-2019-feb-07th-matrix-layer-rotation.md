@@ -1,11 +1,12 @@
 ---
+title: 2019/Feb/07th - Matrix Layer Rotation
 layout: post
 comments: true
 social-share: true
 show-avatar: true
-title: 2019/Feb/07th - Matrix Layer Rotation
 tags:
 - implementation
+date: '2019-02-07 16:19:02'
 ---
 
 > https://www.hackerrank.com/challenges/matrix-rotation-algo/problem

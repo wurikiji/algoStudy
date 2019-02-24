@@ -1,12 +1,13 @@
 ---
+title: 2019/Feb/6th - Lily's Homework
 layout: post
 comments: true
 social-share: true
 show-avatar: true
-title: 2019/Feb/6th - Lily's Homework
 tags:
 - sort
-- implematation
+- implementation
+date: '2019-02-06 16:19:02'
 ---
 
 > https://www.hackerrank.com/challenges/lilys-homework/problem

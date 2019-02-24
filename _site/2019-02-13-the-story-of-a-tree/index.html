@@ -6,7 +6,7 @@
   <meta http-equiv="X-UA-Compatible" content="IE=edge">
   <meta name="viewport" content="width=device-width, initial-scale=1.0, maximum-scale=1.0, viewport-fit=cover">
 
-  <title>Minimum Penalty Path</title>
+  <title>The Story of a Tree</title>
 
   <meta name="author" content="wurikiji(GIHWAN OH)" />
 
@@ -58,19 +58,19 @@
   
 
   
-  <meta property="og:title" content="Minimum Penalty Path" />
+  <meta property="og:title" content="The Story of a Tree" />
   
 
    
-  <meta property="og:description" content="https://www.hackerrank.com/challenges/beautiful-path/problem 문제 요약 코스트를 계산하는 방법이 bitwise OR 인 그래프의 최단 경로를 구하는 문제 숨겨진 조건 bitwise OR를 사용하므로 전체 경로의 코스트 최댓값이 한정됨. 입력으로 주어지는 코스트의 최댓값이 1024 = 2^10 이므로, 최단 경로일 때 가능한 코스트의 bitwise OR 합계는 2^11 -1 = 2047 임. 풀이법 단순 최단경로 알고리즘을 사용하면...">
+  <meta property="og:description" content="https://www.hackerrank.com/challenges/the-story-of-a-tree/problem 문제 요약 그래프가 하나 주어짐 해당 그래프의 랜덤한 노드를 Root 노드로 하는 트리 형태로 변경 트리의 형태를 예측하는 새로운 타겟 그래프가 주어짐 2번 스텝에서 생성가능한 모든 트리 중에서, 3번 스텝의 그래프와 최소 K개의 (parent, child) 쌍이 일치하는 트리의 비율이 얼마나 되는지 출력 풀이법 단순 풀이 N 개의 노드를 모두...">
   
 
 
   <meta property="og:type" content="website" />
 
   
-  <meta property="og:url" content="http://localhost:4000/2019-02-24-minimum-penalty-path/" />
-  <link rel="canonical" href="http://localhost:4000/2019-02-24-minimum-penalty-path/" />
+  <meta property="og:url" content="http://localhost:4000/2019-02-13-the-story-of-a-tree/" />
+  <link rel="canonical" href="http://localhost:4000/2019-02-13-the-story-of-a-tree/" />
   
 
   
@@ -82,11 +82,11 @@
   <meta name="twitter:creator" content="@" />
 
   
-  <meta name="twitter:title" content="Minimum Penalty Path" />
+  <meta name="twitter:title" content="The Story of a Tree" />
   
 
   
-  <meta name="twitter:description" content="https://www.hackerrank.com/challenges/beautiful-path/problem 문제 요약 코스트를 계산하는 방법이 bitwise OR 인 그래프의 최단 경로를 구하는 문제 숨겨진 조건 bitwise OR를 사용하므로 전체 경로의 코스트 최댓값이 한정됨. 입력으로 주어지는 코스트의 최댓값이 1024 = 2^10 이므로, 최단 경로일 때 가능한 코스트의 bitwise OR 합계는 2^11 -1 = 2047 임. 풀이법 단순 최단경로 알고리즘을 사용하면...">
+  <meta name="twitter:description" content="https://www.hackerrank.com/challenges/the-story-of-a-tree/problem 문제 요약 그래프가 하나 주어짐 해당 그래프의 랜덤한 노드를 Root 노드로 하는 트리 형태로 변경 트리의 형태를 예측하는 새로운 타겟 그래프가 주어짐 2번 스텝에서 생성가능한 모든 트리 중에서, 3번 스텝의 그래프와 최소 K개의 (parent, child) 쌍이 일치하는 트리의 비율이 얼마나 되는지 출력 풀이법 단순 풀이 N 개의 노드를 모두...">
   
 
   
@@ -201,11 +201,11 @@
     <div class="row">
       <div class="col-lg-8 col-lg-offset-2 col-md-10 col-md-offset-1">
         <div class="post-heading">
-          <h1>Minimum Penalty Path</h1>
+          <h1>The Story of a Tree</h1>
 		  
 		  
 		  
-		  <span class="post-meta">Posted on February 24, 2019</span>
+		  <span class="post-meta">Posted on February 13, 2019</span>
 		  
         </div>
       </div>
@@ -226,30 +226,31 @@
 
       <article role="main" class="blog-post">
         <blockquote>
-  <p>https://www.hackerrank.com/challenges/beautiful-path/problem</p>
+  <p>https://www.hackerrank.com/challenges/the-story-of-a-tree/problem</p>
 </blockquote>
 
 <h2 id="문제-요약">문제 요약</h2>
 
-<p>코스트를 계산하는 방법이 <code class="highlighter-rouge">bitwise OR</code> 인 그래프의 최단 경로를 구하는 문제</p>
-
-<h2 id="숨겨진-조건">숨겨진 조건</h2>
-
 <ol>
-  <li>bitwise OR를 사용하므로 전체 경로의 코스트 최댓값이 한정됨. 입력으로 주어지는 코스트의 최댓값이 1024 = 2^10 이므로, 최단 경로일 때 가능한 코스트의 bitwise OR 합계는 2^11 -1 = 2047 임.</li>
+  <li>그래프가 하나 주어짐</li>
+  <li>해당 그래프의 랜덤한 노드를 Root 노드로 하는 트리 형태로 변경</li>
+  <li>트리의 형태를 예측하는 새로운 타겟 그래프가 주어짐</li>
+  <li>2번 스텝에서 생성가능한 모든 트리 중에서, 3번 스텝의 그래프와 최소 K개의 (parent, child) 쌍이 일치하는 트리의 비율이 얼마나 되는지 출력</li>
 </ol>
 
 <h2 id="풀이법">풀이법</h2>
 
-<ol>
-  <li>
-    <p>단순 최단경로 알고리즘을 사용하면 됨
- 최단 경로상에서 값이 감소하는 경우는 존재 하지 않으므로 다익스트라 같은 구현이 쉬운 알고리즘을 사용해도 됨.</p>
-  </li>
-  <li>
-    <p>혹은 경로 합의 최대가 2047임이 보장되므로, 입력 제한인 10^3 * 2047 =&gt; 약 10^6 =&gt; 약 100만의 매우 작은 경우의 수를 전체 탐색 해도 됨.</p>
-  </li>
-</ol>
+<h3 id="단순-풀이">단순 풀이</h3>
+
+<p>N 개의 노드를 모두 하나씩 루트 노드로 지정하면서 예측 그래프와 일일이 비교해보기. 이 경우 N개의 노드를 루트 노드로 지정하면서, 새로운 트리를 만들기 위해 N탐색을 하므로 O(N^2)의 시간 복잡도가 필요하게 됨. N 조건의 10^5 이므로 Time out 가능성이 매우 높음</p>
+
+<h3 id="조건을-이용">조건을 이용</h3>
+
+<p>트리를 만드는 방법에 제약 사항이 없음. 어떤 노드를 먼저 트리의 루트 노드로 만드는 지는 상관이 없게됨.</p>
+
+<p>일단 아무 노드나 선택하여 해당 노드를 루트 노드로 하는 트리를 생성. 이후 다음 트리를 선택할 때에는 랜덤으로 선택하는 것이 아닌, 현재 루트 노드의 바로 아랫 자식 노드를 선택. 이 경우 변경된 트리에서 방향이 바뀐 엣지는 기존 루트노드와 새로운 루트노드 사이의 엣지들 뿐임.</p>
+
+<p>첫 트리를 만드는 데 드는 비용인 O(N)이 필요하고. 이후 N개의 루트를 도는 비용 O(N)이 필요함. 결과적으로 최종 복잡도는 O(N)이 됨.</p>
 
       </article>
 
@@ -258,11 +259,15 @@
           Tags:
           
           
-            <a href="/algoStudy/tags#greedy">greedy</a>
+            <a href="/algoStudy/tags#bfs">bfs</a>
           
-            <a href="/algoStudy/tags#shortest path">shortest path</a>
+            <a href="/algoStudy/tags#dfs">dfs</a>
+          
+            <a href="/algoStudy/tags#tree">tree</a>
           
             <a href="/algoStudy/tags#graph">graph</a>
+          
+            <a href="/algoStudy/tags#greedy">greedy</a>
           
           
         </div>
@@ -279,7 +284,7 @@
 
   
   <!--- Share on Twitter -->
-    <a href="https://twitter.com/intent/tweet?text=Minimum+Penalty+Path+http://localhost:4000/2019-02-24-minimum-penalty-path/"
+    <a href="https://twitter.com/intent/tweet?text=The+Story+of+a+Tree+http://localhost:4000/2019-02-13-the-story-of-a-tree/"
       class="btn btn-social-icon btn-twitter" title="Share on Twitter">
       <span class="fa fa-fw fa-twitter" aria-hidden="true"></span>
       <span class="sr-only">Twitter</span>
@@ -288,7 +293,7 @@
 
   
   <!--- Share on Facebook -->
-    <a href="https://www.facebook.com/sharer/sharer.php?u=http://localhost:4000/2019-02-24-minimum-penalty-path/"
+    <a href="https://www.facebook.com/sharer/sharer.php?u=http://localhost:4000/2019-02-13-the-story-of-a-tree/"
       class="btn btn-social-icon btn-facebook" title="Share on Facebook">
       <span class="fa fa-fw fa-facebook" aria-hidden="true"></span>
       <span class="sr-only">Facebook</span>
@@ -299,7 +304,7 @@
 
   
   <!--- Share on LinkedIn -->
-    <a href="https://www.linkedin.com/shareArticle?mini=true&url=http://localhost:4000/2019-02-24-minimum-penalty-path/"
+    <a href="https://www.linkedin.com/shareArticle?mini=true&url=http://localhost:4000/2019-02-13-the-story-of-a-tree/"
       class="btn btn-social-icon btn-linkedin" title="Share on LinkedIn">
       <span class="fa fa-fw fa-linkedin" aria-hidden="true"></span>
       <span class="sr-only">LinkedIn</span>
@@ -315,12 +320,12 @@
       <ul class="pager blog-pager">
         
         <li class="previous">
-          <a href="/algoStudy/2019-02-24-a-or-b/" data-toggle="tooltip" data-placement="top" title="A or B">&larr; Previous Post</a>
+          <a href="/algoStudy/2019-02-12-a-or-b/" data-toggle="tooltip" data-placement="top" title="A or B">&larr; Previous Post</a>
         </li>
         
         
         <li class="next">
-          <a href="/algoStudy/2019-02-24-the-story-of-a-tree/" data-toggle="tooltip" data-placement="top" title="The Story of a Tree">Next Post &rarr;</a>
+          <a href="/algoStudy/2019-02-14-gaming-array/" data-toggle="tooltip" data-placement="top" title="Gaming Array">Next Post &rarr;</a>
         </li>
         
       </ul>

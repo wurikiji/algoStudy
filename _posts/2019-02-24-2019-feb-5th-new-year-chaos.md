@@ -6,6 +6,7 @@ social-share: true
 show-avatar: true
 tags:
 - implementation
+date: '2019-02-05 16:19:02'
 ---
 
 > https://www.hackerrank.com/challenges/new-year-chaos/problem

@@ -1,15 +1,16 @@
 ---
+title: The Story of a Tree
 layout: post
 comments: true
 social-share: true
 show-avatar: true
-title: The Story of a Tree
 tags:
 - bfs
 - dfs
 - tree
 - graph
 - greedy
+date: '2019-02-13 16:19:02'
 ---
 
 > https://www.hackerrank.com/challenges/the-story-of-a-tree/problem

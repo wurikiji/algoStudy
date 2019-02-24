@@ -6,7 +6,7 @@
   <meta http-equiv="X-UA-Compatible" content="IE=edge">
   <meta name="viewport" content="width=device-width, initial-scale=1.0, maximum-scale=1.0, viewport-fit=cover">
 
-  <title>2019/Feb/07th - Matrix Layer Rotation</title>
+  <title>Stock Maximize</title>
 
   <meta name="author" content="wurikiji(GIHWAN OH)" />
 
@@ -58,32 +58,19 @@
   
 
   
-  <meta property="og:title" content="2019/Feb/07th - Matrix Layer Rotation" />
+  <meta property="og:title" content="Stock Maximize" />
   
 
    
-  <meta property="og:description" content="
-  https://www.hackerrank.com/challenges/matrix-rotation-algo/problem
-
-
-문제 요약
-
-
-  주어진 배열을 주어진 횟수 r 만큼 rotation 해서 나온 결과값 출력
-
-
-풀이법
-
-그냥 단순 구현 하면 되는 문제
-">
+  <meta property="og:description" content="문제 https://www.hackerrank.com/challenges/stockmax/problem 코드 https://github.com/depromeet/algoStudy/blob/master/medium/1902/190215/ogh.cc 문제 요약 trade cost 를 담은 배열이 주어짐 각 배열의 원소를 trade 하거나 하지 않을 수 있음 buy 한 경우 반드시 sell 해야함. 이 때 buy 하는 trade cost는 해당 원소 뒤의 아무 원소나 상관없음 스텝 2-3 을 반복할 때 최대로 얻을 수 있는 이득을 출력...">
   
 
 
   <meta property="og:type" content="website" />
 
   
-  <meta property="og:url" content="http://localhost:4000/2019-02-24-2019-feb-07th-matrix-layer-rotation/" />
-  <link rel="canonical" href="http://localhost:4000/2019-02-24-2019-feb-07th-matrix-layer-rotation/" />
+  <meta property="og:url" content="http://localhost:4000/2019-02-15-stock-maximize/" />
+  <link rel="canonical" href="http://localhost:4000/2019-02-15-stock-maximize/" />
   
 
   
@@ -95,24 +82,11 @@
   <meta name="twitter:creator" content="@" />
 
   
-  <meta name="twitter:title" content="2019/Feb/07th - Matrix Layer Rotation" />
+  <meta name="twitter:title" content="Stock Maximize" />
   
 
   
-  <meta name="twitter:description" content="
-  https://www.hackerrank.com/challenges/matrix-rotation-algo/problem
-
-
-문제 요약
-
-
-  주어진 배열을 주어진 횟수 r 만큼 rotation 해서 나온 결과값 출력
-
-
-풀이법
-
-그냥 단순 구현 하면 되는 문제
-">
+  <meta name="twitter:description" content="문제 https://www.hackerrank.com/challenges/stockmax/problem 코드 https://github.com/depromeet/algoStudy/blob/master/medium/1902/190215/ogh.cc 문제 요약 trade cost 를 담은 배열이 주어짐 각 배열의 원소를 trade 하거나 하지 않을 수 있음 buy 한 경우 반드시 sell 해야함. 이 때 buy 하는 trade cost는 해당 원소 뒤의 아무 원소나 상관없음 스텝 2-3 을 반복할 때 최대로 얻을 수 있는 이득을 출력...">
   
 
   
@@ -227,11 +201,11 @@
     <div class="row">
       <div class="col-lg-8 col-lg-offset-2 col-md-10 col-md-offset-1">
         <div class="post-heading">
-          <h1>2019/Feb/07th - Matrix Layer Rotation</h1>
+          <h1>Stock Maximize</h1>
 		  
 		  
 		  
-		  <span class="post-meta">Posted on February 24, 2019</span>
+		  <span class="post-meta">Posted on February 15, 2019</span>
 		  
         </div>
       </div>
@@ -252,18 +226,36 @@
 
       <article role="main" class="blog-post">
         <blockquote>
-  <p>https://www.hackerrank.com/challenges/matrix-rotation-algo/problem</p>
+  <p>문제 https://www.hackerrank.com/challenges/stockmax/problem</p>
+</blockquote>
+
+<blockquote>
+  <p>코드 https://github.com/depromeet/algoStudy/blob/master/medium/1902/190215/ogh.cc</p>
 </blockquote>
 
 <h2 id="문제-요약">문제 요약</h2>
 
 <ol>
-  <li>주어진 배열을 주어진 횟수 r 만큼 rotation 해서 나온 결과값 출력</li>
+  <li>trade cost 를 담은 배열이 주어짐</li>
+  <li>각 배열의 원소를 trade 하거나 하지 않을 수 있음</li>
+  <li>buy 한 경우 반드시 sell 해야함. 이 때 buy 하는 trade cost는 해당 원소 뒤의 아무 원소나 상관없음</li>
+  <li>스텝 2-3 을 반복할 때 최대로 얻을 수 있는 이득을 출력</li>
 </ol>
 
-<h2 id="풀이법">풀이법</h2>
+<h2 id="문제-풀이">문제 풀이</h2>
 
-<p>그냥 단순 구현 하면 되는 문제</p>
+<p>O(N^2)은 그냥 이중 for 돌리면 되므로 매우 간단 하지만 시간이 너무 오래 걸림.</p>
+
+<p>일단 buy 한 경우 해당 원소 뒤에 있는 원소들 중 가장 큰 값으로 sell 하면 됨. 큰 값이 없을 경우 buy 하면 안됨. 내 위치 이후의 원소들 중 가장 큰 값이 필요하므로, 배열의 뒤 부터 탐색하면서 항상 <code class="highlighter-rouge">max cost</code> 값을 갱신하면서 cost gap 계산해서 더하면 끝</p>
+
+<div class="language-cpp highlighter-rouge"><div class="highlight"><pre class="highlight"><code><span class="kt">int</span> <span class="n">max</span> <span class="o">=</span> <span class="mi">0</span><span class="p">;</span>
+<span class="kt">long</span> <span class="kt">long</span> <span class="n">sum</span> <span class="o">=</span> <span class="mi">0</span><span class="p">;</span>
+<span class="n">reverse</span><span class="p">(</span><span class="n">prices</span><span class="p">.</span><span class="n">begin</span><span class="p">(),</span> <span class="n">prices</span><span class="p">.</span><span class="n">end</span><span class="p">());</span>
+<span class="k">for</span><span class="p">(</span> <span class="k">auto</span> <span class="n">price</span><span class="o">:</span> <span class="n">prices</span><span class="p">)</span> <span class="p">{</span>
+	<span class="k">if</span> <span class="p">(</span><span class="n">max</span> <span class="o">&lt;</span> <span class="n">price</span><span class="p">)</span> <span class="n">max</span> <span class="o">=</span> <span class="n">price</span><span class="p">;</span>
+	<span class="k">if</span> <span class="p">(</span><span class="n">price</span> <span class="o">&lt;</span> <span class="n">max</span><span class="p">)</span> <span class="n">sum</span> <span class="o">+=</span> <span class="n">max</span> <span class="o">-</span> <span class="n">price</span><span class="p">;</span>
+<span class="p">}</span>
+</code></pre></div></div>
 
       </article>
 
@@ -272,7 +264,7 @@
           Tags:
           
           
-            <a href="/algoStudy/tags#implementation">implementation</a>
+            <a href="/algoStudy/tags#greedy">greedy</a>
           
           
         </div>
@@ -289,7 +281,7 @@
 
   
   <!--- Share on Twitter -->
-    <a href="https://twitter.com/intent/tweet?text=2019%2FFeb%2F07th+-+Matrix+Layer+Rotation+http://localhost:4000/2019-02-24-2019-feb-07th-matrix-layer-rotation/"
+    <a href="https://twitter.com/intent/tweet?text=Stock+Maximize+http://localhost:4000/2019-02-15-stock-maximize/"
       class="btn btn-social-icon btn-twitter" title="Share on Twitter">
       <span class="fa fa-fw fa-twitter" aria-hidden="true"></span>
       <span class="sr-only">Twitter</span>
@@ -298,7 +290,7 @@
 
   
   <!--- Share on Facebook -->
-    <a href="https://www.facebook.com/sharer/sharer.php?u=http://localhost:4000/2019-02-24-2019-feb-07th-matrix-layer-rotation/"
+    <a href="https://www.facebook.com/sharer/sharer.php?u=http://localhost:4000/2019-02-15-stock-maximize/"
       class="btn btn-social-icon btn-facebook" title="Share on Facebook">
       <span class="fa fa-fw fa-facebook" aria-hidden="true"></span>
       <span class="sr-only">Facebook</span>
@@ -309,7 +301,7 @@
 
   
   <!--- Share on LinkedIn -->
-    <a href="https://www.linkedin.com/shareArticle?mini=true&url=http://localhost:4000/2019-02-24-2019-feb-07th-matrix-layer-rotation/"
+    <a href="https://www.linkedin.com/shareArticle?mini=true&url=http://localhost:4000/2019-02-15-stock-maximize/"
       class="btn btn-social-icon btn-linkedin" title="Share on LinkedIn">
       <span class="fa fa-fw fa-linkedin" aria-hidden="true"></span>
       <span class="sr-only">LinkedIn</span>
@@ -325,12 +317,12 @@
       <ul class="pager blog-pager">
         
         <li class="previous">
-          <a href="/algoStudy/2019-02-16-19-feb-3rd-prims-mst/" data-toggle="tooltip" data-placement="top" title="2019/Feb/3rd - Prim's (MST)">&larr; Previous Post</a>
+          <a href="/algoStudy/2019-02-14-gaming-array/" data-toggle="tooltip" data-placement="top" title="Gaming Array">&larr; Previous Post</a>
         </li>
         
         
         <li class="next">
-          <a href="/algoStudy/2019-02-24-2019-feb-5th-new-year-chaos/" data-toggle="tooltip" data-placement="top" title="2019/Feb/5th - New Year Chaos">Next Post &rarr;</a>
+          <a href="/algoStudy/2019-02-18-organizing-containers-of-balls/" data-toggle="tooltip" data-placement="top" title="Organizing Containers of Balls">Next Post &rarr;</a>
         </li>
         
       </ul>

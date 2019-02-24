@@ -7,25 +7,47 @@
     <atom:link href="http://localhost:4000/feed.xml" rel="self" type="application/rss+xml" />
     
       <item>
+        <title>Organizing Containers of Balls</title>
+        <description>
+          
+          문제 https://www.hackerrank.com/challenges/organizing-containers-of-balls/problem 코드 https://github.com/depromeet/algoStudy/blob/master/medium/1902/190218/ogh.cc 문제 요약 N 종류의 공 M개를 N개의 상자에 나눠담고 싶음. 단, 섞여있는 공을 다른 상자에 옮기고 싶은 경우 타겟 상자의 다른 공과 swap해야만 옮길 수 있음. 모든 상자가 단 한 종류의 공만 가지고 있도록 바꿀 수 있으면 Possible 못 바꾸면 Impossible을 출력 문제 풀이 공의 종류와...
+        </description>
+        <pubDate>Mon, 18 Feb 2019 16:19:02 +0900</pubDate>
+        <link>http://localhost:4000/2019-02-18-organizing-containers-of-balls/</link>
+        <guid isPermaLink="true">http://localhost:4000/2019-02-18-organizing-containers-of-balls/</guid>
+      </item>
+    
+      <item>
+        <title>Stock Maximize</title>
+        <description>
+          
+          문제 https://www.hackerrank.com/challenges/stockmax/problem 코드 https://github.com/depromeet/algoStudy/blob/master/medium/1902/190215/ogh.cc 문제 요약 trade cost 를 담은 배열이 주어짐 각 배열의 원소를 trade 하거나 하지 않을 수 있음 buy 한 경우 반드시 sell 해야함. 이 때 buy 하는 trade cost는 해당 원소 뒤의 아무 원소나 상관없음 스텝 2-3 을 반복할 때 최대로 얻을 수 있는 이득을 출력...
+        </description>
+        <pubDate>Fri, 15 Feb 2019 16:19:02 +0900</pubDate>
+        <link>http://localhost:4000/2019-02-15-stock-maximize/</link>
+        <guid isPermaLink="true">http://localhost:4000/2019-02-15-stock-maximize/</guid>
+      </item>
+    
+      <item>
+        <title>Gaming Array</title>
+        <description>
+          
+          https://www.hackerrank.com/challenges/an-interesting-game-1/problem 문제 요약 초기 배열 arr이 주어짐 해당 배열에서 가장 큰 원소의 위치를 찾음 해당 원소 및 그 뒤의 모든 원소들을 배열에서 제거 남은 배열 로 스텝 2-3을 반복 배열의 모든 원소가 제거 될 때까지 걸리는 횟수를 구하고 홀수/짝수 판별해서 승리자 출력하기 풀이법 단순 풀이 매번 최댓값 찾아서 문제에 주어진...
+        </description>
+        <pubDate>Thu, 14 Feb 2019 16:19:02 +0900</pubDate>
+        <link>http://localhost:4000/2019-02-14-gaming-array/</link>
+        <guid isPermaLink="true">http://localhost:4000/2019-02-14-gaming-array/</guid>
+      </item>
+    
+      <item>
         <title>The Story of a Tree</title>
         <description>
           
           https://www.hackerrank.com/challenges/the-story-of-a-tree/problem 문제 요약 그래프가 하나 주어짐 해당 그래프의 랜덤한 노드를 Root 노드로 하는 트리 형태로 변경 트리의 형태를 예측하는 새로운 타겟 그래프가 주어짐 2번 스텝에서 생성가능한 모든 트리 중에서, 3번 스텝의 그래프와 최소 K개의 (parent, child) 쌍이 일치하는 트리의 비율이 얼마나 되는지 출력 풀이법 단순 풀이 N 개의 노드를 모두...
         </description>
-        <pubDate>Sun, 24 Feb 2019 00:00:00 +0900</pubDate>
-        <link>http://localhost:4000/2019-02-24-the-story-of-a-tree/</link>
-        <guid isPermaLink="true">http://localhost:4000/2019-02-24-the-story-of-a-tree/</guid>
-      </item>
-    
-      <item>
-        <title>Minimum Penalty Path</title>
-        <description>
-          
-          https://www.hackerrank.com/challenges/beautiful-path/problem 문제 요약 코스트를 계산하는 방법이 bitwise OR 인 그래프의 최단 경로를 구하는 문제 숨겨진 조건 bitwise OR를 사용하므로 전체 경로의 코스트 최댓값이 한정됨. 입력으로 주어지는 코스트의 최댓값이 1024 = 2^10 이므로, 최단 경로일 때 가능한 코스트의 bitwise OR 합계는 2^11 -1 = 2047 임. 풀이법 단순 최단경로 알고리즘을 사용하면...
-        </description>
-        <pubDate>Sun, 24 Feb 2019 00:00:00 +0900</pubDate>
-        <link>http://localhost:4000/2019-02-24-minimum-penalty-path/</link>
-        <guid isPermaLink="true">http://localhost:4000/2019-02-24-minimum-penalty-path/</guid>
+        <pubDate>Wed, 13 Feb 2019 16:19:02 +0900</pubDate>
+        <link>http://localhost:4000/2019-02-13-the-story-of-a-tree/</link>
+        <guid isPermaLink="true">http://localhost:4000/2019-02-13-the-story-of-a-tree/</guid>
       </item>
     
       <item>
@@ -34,31 +56,20 @@
           
           https://www.hackerrank.com/challenges/aorb/problem 문제 요약 숫자 A, B 가 주어지고 타겟 C가 주어짐 A bitwise OR B 가 C가 되도록 A와 B의 숫자를 바꿔야함 주어진 k개 이하의 bit를 수정하여 C를 만들 수 있으면, 여러가지 조합 중 a. 가장 작은 A이면서 b. 가장 작은 B인 조합을 출력 k 비트 가지고 C를 만들 수...
         </description>
-        <pubDate>Sun, 24 Feb 2019 00:00:00 +0900</pubDate>
-        <link>http://localhost:4000/2019-02-24-a-or-b/</link>
-        <guid isPermaLink="true">http://localhost:4000/2019-02-24-a-or-b/</guid>
+        <pubDate>Tue, 12 Feb 2019 16:19:02 +0900</pubDate>
+        <link>http://localhost:4000/2019-02-12-a-or-b/</link>
+        <guid isPermaLink="true">http://localhost:4000/2019-02-12-a-or-b/</guid>
       </item>
     
       <item>
-        <title>2019/Feb/6th - Lily's Homework</title>
+        <title>Minimum Penalty Path</title>
         <description>
           
-          https://www.hackerrank.com/challenges/lilys-homework/problem 문제 요약 배열이 주어짐 내림차순 혹은 오름차순으로 정렬하는데 필요한 최소 swap 수를 출력 풀이법 주어진 배열을 정렬한 복사본을 생성 정렬된 배열과 원본 배열 비교하면서 원위치로 직접 swap 해가면서 횟수를 기록 역순 정렬된 배열 생성 순서 2와 동일하게 직접 swap 해가면서 기록 순서 2와 순서 4에서 나온 수 중 작은...
+          https://www.hackerrank.com/challenges/beautiful-path/problem 문제 요약 코스트를 계산하는 방법이 bitwise OR 인 그래프의 최단 경로를 구하는 문제 숨겨진 조건 bitwise OR를 사용하므로 전체 경로의 코스트 최댓값이 한정됨. 입력으로 주어지는 코스트의 최댓값이 1024 = 2^10 이므로, 최단 경로일 때 가능한 코스트의 bitwise OR 합계는 2^11 -1 = 2047 임. 풀이법 단순 최단경로 알고리즘을 사용하면...
         </description>
-        <pubDate>Sun, 24 Feb 2019 00:00:00 +0900</pubDate>
-        <link>http://localhost:4000/2019-02-24-2019-feb-6th-lilys-homework/</link>
-        <guid isPermaLink="true">http://localhost:4000/2019-02-24-2019-feb-6th-lilys-homework/</guid>
-      </item>
-    
-      <item>
-        <title>2019/Feb/5th - New Year Chaos</title>
-        <description>
-          
-          https://www.hackerrank.com/challenges/new-year-chaos/problem 문제 요약 [1 …. N] 으로 원소가 1씩 증가하는 정렬 된 배열의 N이 문제로 주어짐 각 원소는 원래의 자리보다 최대 2칸 앞까지 이동할 수 있음 이동은 bubbling 형태 (가고싶은 자리로 바로 swap이 아닌 한칸씩 swap하면서 이동) 검증을 원하는 배열이 위의 조건을 만족하지 못할 경우 Too chaotic을 출력하고, 만족할 경우...
-        </description>
-        <pubDate>Sun, 24 Feb 2019 00:00:00 +0900</pubDate>
-        <link>http://localhost:4000/2019-02-24-2019-feb-5th-new-year-chaos/</link>
-        <guid isPermaLink="true">http://localhost:4000/2019-02-24-2019-feb-5th-new-year-chaos/</guid>
+        <pubDate>Mon, 11 Feb 2019 16:19:02 +0900</pubDate>
+        <link>http://localhost:4000/2019-02-11-minimum-penalty-path/</link>
+        <guid isPermaLink="true">http://localhost:4000/2019-02-11-minimum-penalty-path/</guid>
       </item>
     
       <item>
@@ -80,9 +91,31 @@
 그냥 단순 구현 하면 되는 문제
 
         </description>
-        <pubDate>Sun, 24 Feb 2019 00:00:00 +0900</pubDate>
-        <link>http://localhost:4000/2019-02-24-2019-feb-07th-matrix-layer-rotation/</link>
-        <guid isPermaLink="true">http://localhost:4000/2019-02-24-2019-feb-07th-matrix-layer-rotation/</guid>
+        <pubDate>Thu, 07 Feb 2019 16:19:02 +0900</pubDate>
+        <link>http://localhost:4000/2019-02-07-2019-feb-07th-matrix-layer-rotation/</link>
+        <guid isPermaLink="true">http://localhost:4000/2019-02-07-2019-feb-07th-matrix-layer-rotation/</guid>
+      </item>
+    
+      <item>
+        <title>2019/Feb/6th - Lily's Homework</title>
+        <description>
+          
+          https://www.hackerrank.com/challenges/lilys-homework/problem 문제 요약 배열이 주어짐 내림차순 혹은 오름차순으로 정렬하는데 필요한 최소 swap 수를 출력 풀이법 주어진 배열을 정렬한 복사본을 생성 정렬된 배열과 원본 배열 비교하면서 원위치로 직접 swap 해가면서 횟수를 기록 역순 정렬된 배열 생성 순서 2와 동일하게 직접 swap 해가면서 기록 순서 2와 순서 4에서 나온 수 중 작은...
+        </description>
+        <pubDate>Wed, 06 Feb 2019 16:19:02 +0900</pubDate>
+        <link>http://localhost:4000/2019-02-06-2019-feb-6th-lilys-homework/</link>
+        <guid isPermaLink="true">http://localhost:4000/2019-02-06-2019-feb-6th-lilys-homework/</guid>
+      </item>
+    
+      <item>
+        <title>2019/Feb/5th - New Year Chaos</title>
+        <description>
+          
+          https://www.hackerrank.com/challenges/new-year-chaos/problem 문제 요약 [1 …. N] 으로 원소가 1씩 증가하는 정렬 된 배열의 N이 문제로 주어짐 각 원소는 원래의 자리보다 최대 2칸 앞까지 이동할 수 있음 이동은 bubbling 형태 (가고싶은 자리로 바로 swap이 아닌 한칸씩 swap하면서 이동) 검증을 원하는 배열이 위의 조건을 만족하지 못할 경우 Too chaotic을 출력하고, 만족할 경우...
+        </description>
+        <pubDate>Tue, 05 Feb 2019 16:19:02 +0900</pubDate>
+        <link>http://localhost:4000/2019-02-05-2019-feb-5th-new-year-chaos/</link>
+        <guid isPermaLink="true">http://localhost:4000/2019-02-05-2019-feb-5th-new-year-chaos/</guid>
       </item>
     
       <item>
@@ -96,9 +129,9 @@
 단순히 가장 최소인 간선 구하면 되는 문제.  그래프이므로 엣지 정보를 저장할 때 양방향으로 타겟 노드 모두에게 간선 저장을 하고, priority_queue로 (cost, node id) 쌍을 저장 한뒤, cost 값이 가장 작은 순서대로 뽑아내서 visit 체크를 하면 끝.
 
         </description>
-        <pubDate>Sat, 16 Feb 2019 00:00:00 +0900</pubDate>
-        <link>http://localhost:4000/2019-02-16-19-feb-3rd-prims-mst/</link>
-        <guid isPermaLink="true">http://localhost:4000/2019-02-16-19-feb-3rd-prims-mst/</guid>
+        <pubDate>Sun, 03 Feb 2019 16:19:02 +0900</pubDate>
+        <link>http://localhost:4000/2019-02-03-19-feb-3rd-prims-mst/</link>
+        <guid isPermaLink="true">http://localhost:4000/2019-02-03-19-feb-3rd-prims-mst/</guid>
       </item>
     
       <item>

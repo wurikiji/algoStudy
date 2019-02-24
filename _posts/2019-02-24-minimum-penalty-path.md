@@ -8,6 +8,7 @@ tags:
 - greedy
 - shortest path
 - graph
+date: '2019-02-11 16:19:02'
 ---
 
 > https://www.hackerrank.com/challenges/beautiful-path/problem

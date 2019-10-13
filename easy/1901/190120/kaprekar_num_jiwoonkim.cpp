@@ -25,6 +25,8 @@ void kaprekarNumbers(int p, int q) {
 
 int main()
 {
+    ios_base::sync_with_stdio(false);
+    cin.tie(NULL);
     int p;
     cin >> p;
     cin.ignore(numeric_limits<streamsize>::max(), '\n');
